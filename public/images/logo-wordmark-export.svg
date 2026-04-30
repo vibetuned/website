@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 200 72"
+   width="200"
+   height="72"
+   role="img"
+   aria-label="Vibetuned"
+   version="1.1"
+   id="svg12"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5">
+    <linearGradient
+       id="vt-text"
+       x1="35.004101"
+       y1="56.243202"
+       x2="101.10336"
+       y2="56.243202"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.479146,0,0,0.40336471,-69.523415,-0.89515126)">
+      <stop
+         offset="0%"
+         stop-color="#f5576c"
+         id="stop4" />
+      <stop
+         offset="100%"
+         stop-color="#646cff"
+         id="stop5" />
+    </linearGradient>
+  </defs>
+  <text
+     x="16.476585"
+     y="48.104847"
+     font-family="Inter, system-ui, sans-serif"
+     font-weight="800"
+     font-size="34px"
+     letter-spacing="-1.2"
+     fill="url(#vt-text)"
+     id="text12"
+     style="fill:url(#vt-text)">Vibetuned</text>
+</svg>

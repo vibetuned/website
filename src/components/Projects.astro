@@ -1,0 +1,218 @@
+---
+const projects = [
+  {
+    id: 'theoryflow',
+    name: 'TheoryFlow',
+    tag: 'Theory Assistant',
+    tagline: null,
+    features: ['Interactive Lessons', 'Practice Exercises', 'Real-time Feedback'],
+    dark: true,
+  },
+  {
+    id: 'omr',
+    name: 'OMR (Optical Music Recognition)',
+    tag: null,
+    tagline: 'Scan-To-Score',
+    features: [],
+    dark: false,
+  },
+];
+---
+<section class="projects" id="projects">
+  <div class="projects-inner">
+    <h2 class="section-title">Our Projects</h2>
+    <div class="projects-grid">
+
+      <!-- TheoryFlow Card -->
+      <article class="card card-dark">
+        <div class="card-header">
+          <div class="card-icon">
+            <img src="/images/logo-midi-stroke-export.svg" alt="Midi-Stroke icon" width="100" height="100" />
+          </div>
+          <div>
+            <p class="card-tag">Web Application</p>
+            <ul class="card-features">
+              <li>Interactive Lessons</li>
+              <li>Practice Exercises</li>
+              <li>Real-time Feedback</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div>
+            <h3 class="card-name">Midi-Stroke</h3>
+            <p class="card-tagline">Practice Makes Perfect</p>
+          </div>
+          <a href="https://github.com/vibetuned/midi-stroke" class="card-link" aria-label="Learn more about Midi-Stroke">→</a>
+        </div>
+      </article>
+
+      <!-- OMR Card -->
+      <article class="card card-light">
+        <div class="card-header omr-header">
+          <div class="card-icon">
+            <img src="/images/logo-kakigori-export.svg" alt="Kakigori icon" width="100" height="100" />
+          </div>
+          <div>
+            <ul class="card-features omr-features">
+              <li>Interactive Lessons</li>
+              <li>Practice Exercises</li>
+              <li>Real-time Feedback</li>
+            </ul>
+          </div>
+          <div class="card-icon">
+            <img src="/images/logo-gelato-export.svg" alt="Gelato icon" width="100" height="100" />
+          </div>
+        </div>
+        <div class="card-footer">
+          <div>
+            <h3 class="card-name card-name-dark">OMR (Optical Music Recognition)</h3>
+            <p class="card-tagline">Gelato & Kakigori</p>
+          </div>
+          <a href="https://github.com/vibetuned/gelato" class="card-link card-link-dark" aria-label="Learn more about OMR">→</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    background: 
+      radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.12) 0%, transparent 60%),
+      #0a0f1a;
+    padding: 5rem 1.5rem;
+    position: relative;
+  }
+  .projects-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+  .section-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #fff;
+    margin-bottom: 3rem;
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .card {
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #111827;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.3); }
+  .card-dark .card-header {
+    background: linear-gradient(145deg, rgba(30,58,95,0.6) 0%, rgba(17,24,39,0.9) 100%);
+    position: relative;
+    padding: 1.75rem;
+    flex-grow: 1;
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+  .card-dark .card-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(240,140,80,0.2) 0%, transparent 60%),
+                radial-gradient(circle at bottom right, rgba(59,130,246,0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .card-light .card-header {
+    background: linear-gradient(135deg, #fde68a 0%, #f9a8d4 50%, #a7f3d0 100%);
+    padding: 1.75rem;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-icon { flex-shrink: 0; position: relative; z-index: 1; }
+  .card-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.6rem;
+    position: relative;
+    padding-left: 1rem;
+    z-index: 1;
+  }
+  .card-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    position: relative;
+    z-index: 1;
+  }
+  .card-features li {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.8);
+    padding-left: 1rem;
+    position: relative;
+  }
+  .card-features li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #4a9eff;
+  }
+  
+  .omr-features li {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(30,58,95,1);
+    padding:0 2rem;
+    position: relative;
+
+  }
+
+  .card-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    color: #4a9eff;
+  }
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0d121c;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 1.25rem 1.75rem;
+  }
+  .card-name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #fff;
+  }
+  .card-tagline {
+    font-size: 0.82rem;
+    color: #888;
+    font-weight: 500;
+    margin-top: 0.25rem;
+  }
+  .card-link {
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.5);
+    transition: color 0.2s;
+  }
+  .card-link:hover { color: #4a9eff; }
+  .omr-header { justify-content: center; padding: 0.5rem 0; }
+
+  @media (max-width: 640px) {
+    .projects-grid { grid-template-columns: 1fr; }
+  }
+</style>

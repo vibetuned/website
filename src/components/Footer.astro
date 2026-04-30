@@ -1,0 +1,145 @@
+---
+---
+<footer class="footer" id="donate">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="/images/logo-vibetuned-export.svg" alt="Vibetuned" width="36" height="36" />
+        <span class="footer-name">Vibetuned</span>
+      </div>
+      <ul class="footer-contact">
+        <li>
+          <svg viewBox="0 0 20 20" fill="none" width="16" height="16" aria-hidden="true">
+            <path d="M2 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5zm2 0l6 5 6-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <a href="mailto:info@vibetuned.net">info@vibetuned.com</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" fill="none" width="16" height="16" aria-hidden="true">
+            <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M2 10h16M10 2a14 14 0 0 1 0 16M10 2a14 14 0 0 0 0 16" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <a href="https://www.vibetuned.com" target="_blank" rel="noopener">www.vibetuned.com</a>
+        </li>
+      </ul>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="https://github.com/vibetuned/midi-stroke">Midi Stroke</a></li>
+          <li><a href="https://github.com/vibetuned/gelato">Gelato</a></li>
+          <li><a href="https://github.com/vibetuned/kakigori">Kakigori</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="https://github.com/vibetuned" aria-label="Github" class="social-btn">
+          <svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-mark-github" viewBox="0 0 24 24" width="32" height="32" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; {new Date().getFullYear()} Vibetuned. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #060a10;
+    padding: 4rem 1.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+  }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+  }
+  .footer-name {
+    font-size: 1.35rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.6);
+  }
+  .footer-contact a { color: rgba(255,255,255,0.6); transition: color 0.2s; }
+  .footer-contact a:hover { color: #fff; }
+  .footer-nav { display: flex; gap: 2.5rem; }
+  .footer-col h4, .footer-social h4 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 1rem;
+  }
+  .footer-col ul { display: flex; flex-direction: column; gap: 0.5rem; }
+  .footer-col a {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.65);
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: #fff; }
+  .social-links { display: flex; gap: 0.75rem; }
+  .social-btn {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.7);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .social-btn:hover { border-color: #fff; color: #fff; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 1.25rem 0;
+    text-align: center;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.3);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-nav { gap: 2rem; }
+  }
+</style>

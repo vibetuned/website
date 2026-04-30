@@ -1,0 +1,106 @@
+---
+const links = [
+  { label: 'Home', href: '/' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'About Us', href: '#about' },
+  { label: 'Resources', href: '#resources' },
+];
+---
+<header class="nav-wrapper">
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <img src="/images/logo-vibetuned-export.svg" alt="Vibetuned logo" width="42" height="42" />
+      <img src="/images/logo-wordmark-export.svg" alt="Vibetuned" class="nav-wordmark" height="42" />
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      {links.map(({ label, href }) => (
+        <li><a href={href} class="nav-link">{label}</a></li>
+      ))}
+    </ul>
+    <!-- <a href="#donate" class="btn-donate">Donate</a> -->
+  </nav>
+</header>
+
+<style>
+  .nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(13, 17, 23, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+  .nav-wordmark { 
+    
+   }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+  }
+  .nav-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    transition: color 0.2s;
+  }
+  .nav-link:hover { color: #fff; }
+  .btn-donate {
+    margin-left: 1.5rem;
+    padding: 0.45rem 1.25rem;
+    border: 1.5px solid #fff;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s;
+    flex-shrink: 0;
+  }
+  .btn-donate:hover { background: #fff; color: #0d1117; }
+  .nav-toggle { display: none; }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .btn-donate { display: none; }
+    .nav-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: auto;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+    }
+  }
+</style>

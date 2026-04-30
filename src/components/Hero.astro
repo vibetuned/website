@@ -1,0 +1,136 @@
+---
+---
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1 class="hero-headline">
+        Bridging the <span class="highlight">digital divide</span> in music education. We create 100% <span class="highlight">open-source</span> AI tools.
+      </h1>
+      <p class="hero-sub">From theory assistants to OMR—and provide the infrastructure to make them accessible to everyone.</p>
+      <a href="#projects" class="btn-cta">Explore Our Tools</a>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-illustration">
+        <!-- AI + Music network graphic (SVG inline) -->
+        <svg viewBox="0 0 420 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+          <!-- Background glow -->
+          <ellipse cx="210" cy="170" rx="180" ry="130" fill="url(#glow)" opacity="0.35"/>
+          <!-- Network nodes -->
+          <circle cx="210" cy="80" r="28" fill="#1e3a5f" stroke="#4a9eff" stroke-width="1.5"/>
+          <text x="210" y="85" text-anchor="middle" fill="#4a9eff" font-size="14" font-weight="700">AI</text>
+
+          <circle cx="90" cy="170" r="20" fill="#1a2a1a" stroke="#4ade80" stroke-width="1.5"/>
+          <circle cx="330" cy="140" r="18" fill="#2a1a2a" stroke="#c084fc" stroke-width="1.5"/>
+          <circle cx="310" cy="240" r="16" fill="#1a2a2a" stroke="#38bdf8" stroke-width="1.5"/>
+          <circle cx="130" cy="250" r="16" fill="#2a1a1a" stroke="#fb923c" stroke-width="1.5"/>
+          <circle cx="210" cy="200" r="22" fill="#1e2a3a" stroke="#60a5fa" stroke-width="1.5"/>
+
+          <!-- Connection lines -->
+          <line x1="210" y1="108" x2="210" y2="178" stroke="#4a9eff" stroke-width="1" opacity="0.5"/>
+          <line x1="210" y1="108" x2="110" y2="165" stroke="#4ade80" stroke-width="1" opacity="0.4"/>
+          <line x1="210" y1="108" x2="315" y2="138" stroke="#c084fc" stroke-width="1" opacity="0.4"/>
+          <line x1="210" y1="200" x2="310" y2="238" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+          <line x1="210" y1="200" x2="130" y2="248" stroke="#fb923c" stroke-width="1" opacity="0.4"/>
+
+          <!-- Music waveform bar chart -->
+          <g transform="translate(60,285)">
+            {[14,22,10,30,18,26,12,28,16,20,8,24].map((h, i) => (
+              <rect
+                x={i * 25}
+                y={-h}
+                width="14"
+                height={h}
+                rx="3"
+                fill={`hsl(${200 + i * 15}, 80%, 60%)`}
+                opacity="0.85"
+              />
+            ))}
+          </g>
+
+          <!-- Musical notes -->
+          <text x="350" y="90" fill="#f472b6" font-size="22" opacity="0.7">♪</text>
+          <text x="60" y="130" fill="#a78bfa" font-size="18" opacity="0.6">♫</text>
+          <text x="340" y="280" fill="#34d399" font-size="16" opacity="0.6">♩</text>
+
+          <defs>
+            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    background: #020617;
+    display: flex;
+    align-items: center;
+    padding-top: 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 10% 10%, rgba(220, 120, 60, 0.35) 0%, transparent 40%),
+      radial-gradient(circle at 80% 50%, rgba(59, 130, 246, 0.25) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+  }
+  .hero-headline {
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.25rem;
+  }
+  .highlight { color: #4a9eff; }
+  .hero-sub {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+  .btn-cta {
+    display: inline-block;
+    padding: 0.85rem 2.25rem;
+    background: #fff;
+    color: #0d1117;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-cta:hover { background: #e2e8f0; transform: translateY(-1px); }
+  .hero-visual { display: flex; align-items: center; justify-content: center; }
+  .hero-svg { width: 100%; max-width: 420px; filter: drop-shadow(0 0 30px rgba(74,158,255,0.25)); }
+
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; text-align: center; }
+    .hero-visual { order: -1; }
+    .hero-svg { max-width: 300px; }
+    .btn-cta { display: block; text-align: center; }
+  }
+</style>
