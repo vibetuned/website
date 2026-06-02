@@ -16,6 +16,14 @@ const projects = [
     features: [],
     dark: false,
   },
+  {
+    id: 'lectures-narrations',
+    name: 'Lectures and Narrations',
+    tag: 'AI Audiobook Pipeline',
+    tagline: 'Immersive Multi-Voice Audiobooks',
+    features: ['ln-vox — Self-hosted AI creator', 'ln-reader — Android companion player', 'Text-to-audio sync'],
+    dark: true,
+  },
 ];
 ---
 <section class="projects" id="projects">
@@ -70,6 +78,30 @@ const projects = [
             <p class="card-tagline">Gelato & Kakigori</p>
           </div>
           <a href="https://github.com/vibetuned/gelato" class="card-link card-link-dark" aria-label="Learn more about OMR">→</a>
+        </div>
+      </article>
+
+      <!-- Lectures and Narrations Card -->
+      <article class="card card-dark">
+        <div class="card-header">
+          <div class="card-icon">
+            <img src="/images/logo-lectures-narrations.webp" alt="Lectures and Narrations icon" width="100" height="100" />
+          </div>
+          <div>
+            <p class="card-tag">AI Audiobook Pipeline</p>
+            <ul class="card-features">
+              <li>ln-vox — Self-hosted AI creator</li>
+              <li>ln-reader — Android companion player</li>
+              <li>Text-to-audio sync</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div>
+            <h3 class="card-name">Lectures and Narrations</h3>
+            <p class="card-tagline">Immersive Multi-Voice Audiobooks</p>
+          </div>
+          <a href="https://github.com/vibetuned/ln-vox/tree/mps" class="card-link" aria-label="Learn more about Lectures and Narrations">→</a>
         </div>
       </article>
 
