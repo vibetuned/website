@@ -1,30 +1,4 @@
 ---
-const projects = [
-  {
-    id: 'theoryflow',
-    name: 'TheoryFlow',
-    tag: 'Theory Assistant',
-    tagline: null,
-    features: ['Interactive Lessons', 'Practice Exercises', 'Real-time Feedback'],
-    dark: true,
-  },
-  {
-    id: 'omr',
-    name: 'OMR (Optical Music Recognition)',
-    tag: null,
-    tagline: 'Scan-To-Score',
-    features: [],
-    dark: false,
-  },
-  {
-    id: 'lectures-narrations',
-    name: 'Lectures and Narrations',
-    tag: 'AI Audiobook Pipeline',
-    tagline: 'Immersive Multi-Voice Audiobooks',
-    features: ['ln-vox — Self-hosted AI creator', 'ln-reader — Android companion player', 'Text-to-audio sync'],
-    dark: true,
-  },
-];
 ---
 <section class="projects" id="projects">
   <div class="projects-inner">
@@ -38,11 +12,11 @@ const projects = [
             <img src="/images/logo-midi-stroke-export.svg" alt="Midi-Stroke icon" width="100" height="100" />
           </div>
           <div>
-            <p class="card-tag">Web Application</p>
+            <p class="card-tag">MIDI Training Platform</p>
             <ul class="card-features">
-              <li>Interactive Lessons</li>
-              <li>Practice Exercises</li>
-              <li>Real-time Feedback</li>
+              <li>Piano, drums, sax &amp; theory</li>
+              <li>Rhythm &amp; practice modes</li>
+              <li>Real engraved scores, in your browser</li>
             </ul>
           </div>
         </div>
@@ -55,29 +29,27 @@ const projects = [
         </div>
       </article>
 
-      <!-- OMR Card -->
-      <article class="card card-light">
-        <div class="card-header omr-header">
+      <!-- Battuta Card -->
+      <article class="card card-dark">
+        <div class="card-header">
           <div class="card-icon">
-            <img src="/images/logo-kakigori-export.svg" alt="Kakigori icon" width="100" height="100" />
+            <img src="/images/logo-battuta-export.svg" alt="Battuta icon" width="100" height="100" />
           </div>
           <div>
-            <ul class="card-features omr-features">
-              <li>Interactive Lessons</li>
-              <li>Practice Exercises</li>
-              <li>Real-time Feedback</li>
+            <p class="card-tag">MEI Notation Editor</p>
+            <ul class="card-features">
+              <li>Keyboard note input with undo</li>
+              <li>Block arranging across staves</li>
+              <li>Repeats, voltas &amp; playback</li>
             </ul>
-          </div>
-          <div class="card-icon">
-            <img src="/images/logo-gelato-export.svg" alt="Gelato icon" width="100" height="100" />
           </div>
         </div>
         <div class="card-footer">
           <div>
-            <h3 class="card-name card-name-dark">OMR (Optical Music Recognition)</h3>
-            <p class="card-tagline">Gelato & Kakigori</p>
+            <h3 class="card-name">Battuta</h3>
+            <p class="card-tagline">Edit Notation the Way You Edit Text</p>
           </div>
-          <a href="https://github.com/vibetuned/gelato" class="card-link card-link-dark" aria-label="Learn more about OMR">→</a>
+          <a href="https://battuta.vibetuned.com/" class="card-link" aria-label="Learn more about Battuta">→</a>
         </div>
       </article>
 
@@ -90,9 +62,9 @@ const projects = [
           <div>
             <p class="card-tag">AI Audiobook Pipeline</p>
             <ul class="card-features">
-              <li>ln-vox — Self-hosted AI creator</li>
-              <li>ln-reader — Android companion player</li>
-              <li>Text-to-audio sync</li>
+              <li>ln-vox — Self-hosted multi-voice AI creator</li>
+              <li>Narrative, lecture &amp; scenario modes</li>
+              <li>ln-reader — Android player with text sync</li>
             </ul>
           </div>
         </div>
@@ -102,6 +74,76 @@ const projects = [
             <p class="card-tagline">Immersive Multi-Voice Audiobooks</p>
           </div>
           <a href="https://ln.vibetuned.com/" class="card-link" aria-label="Learn more about Lectures and Narrations">→</a>
+        </div>
+      </article>
+
+      <!-- 2Reply Card -->
+      <article class="card card-dark">
+        <div class="card-header">
+          <div class="card-icon">
+            <img src="/images/logo-2reply.webp" alt="2Reply icon" width="100" height="100" />
+          </div>
+          <div>
+            <p class="card-tag">Rehearsal App</p>
+            <ul class="card-features">
+              <li>Your script as a conversation</li>
+              <li>Mutes your lines, plays every cue</li>
+              <li>100% on-device, no tracking</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div>
+            <h3 class="card-name">2Reply</h3>
+            <p class="card-tagline">The Scene Partner That Plays Every Part but Yours</p>
+          </div>
+          <a href="https://2reply.vibetuned.com/" class="card-link" aria-label="Learn more about 2Reply">→</a>
+        </div>
+      </article>
+
+      <!-- Gelato Card -->
+      <article class="card card-light">
+        <div class="card-header omr-header">
+          <div class="card-icon">
+            <img src="/images/logo-gelato-export.svg" alt="Gelato icon" width="100" height="100" />
+          </div>
+          <div>
+            <ul class="card-features omr-features">
+              <li>Gemma-based vision-language model</li>
+              <li>Reads fingerings, ornaments &amp; dynamics</li>
+              <li>Single &amp; multi-voice scores</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div>
+            <h3 class="card-name">Gelato</h3>
+            <p class="card-tagline">OMR with a Vision-Language Model</p>
+          </div>
+          <a href="https://github.com/vibetuned/gelato" class="card-link" aria-label="Learn more about Gelato">→</a>
+        </div>
+      </article>
+
+      <!-- Kakigori Card -->
+      <article class="card card-light">
+        <div class="card-header omr-header">
+          <div class="card-icon">
+            <img src="/images/logo-kakigori-export.svg" alt="Kakigori icon" width="100" height="100" />
+          </div>
+          <div>
+            <ul class="card-features omr-features">
+              <li>Vision detector + graph neural network</li>
+              <li>PDF or PNG to Humdrum **kern</li>
+              <li>End-to-end score transcription</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div>
+            <h3 class="card-name">Kakigori</h3>
+            <p class="card-tagline">Scan-to-Score OMR Pipeline</p>
+          </div>
+          <a href="https://github.com/vibetuned/kakigori" class="card-link" aria-label="Learn more about Kakigori">→</a>
         </div>
       </article>
 
